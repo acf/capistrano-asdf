@@ -5,11 +5,11 @@ ASDF_DEFAULT_RUBY_BINS = %w{rake gem bundle ruby rails}
 # Nodejs related bin
 ASDF_DEFAULT_NODEJS_BINS = %w{node npm yarn}
 
-ASDF_DEFAULT_WRAPPER_TEMPLATES = <<~WRAPPER
-  #!/usr/bin/env bash
-
-  . @@ASDF_USER_PATH@@/asdf.sh
-  exec "$@"
+ASDF_DEFAULT_WRAPPER_TEMPLATES = 
+<<~WRAPPER
+#!/usr/bin/env bash
+. @@ASDF_USER_PATH@@/asdf.sh
+exec "$@"
 WRAPPER
 
 namespace :asdf do
